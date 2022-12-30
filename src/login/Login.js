@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { googleClientId } from '../secure';
 function Login(props) {
     const handleLoginResponse = (response) => {props.handleLoginResponse(response)};
     window.handleLoginResponse = handleLoginResponse;
@@ -7,7 +7,7 @@ function Login(props) {
     return (
         <div>
             <div id="g_id_onload"
-                data-client_id=""
+                data-client_id={googleClientId}
                 data-context="signin"
                 data-ux_mode="popup"
                 data-callback="handleLoginResponse"
