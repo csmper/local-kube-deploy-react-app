@@ -14,6 +14,12 @@ export default function User(props) {
         horizontal: 'left',
     };
 
+    const signOut = () => {
+        // https://accounts.google.com/logout.
+        localStorage.removeItem('userToken');
+        window.location.href = "https://accounts.google.com/logout"
+    };
+
     React.useEffect(() => {
         if(avatar) {
             setAnchorEl(avatar)
@@ -35,7 +41,7 @@ export default function User(props) {
                             </Box>
                             <Divider />
                             <Box sx={{marginLeft: 'auto', padding: '.5rem 1rem'}}>
-                                <Button size="small" variant="outlined">Sign out</Button>
+                                <Button size="small" variant="outlined" onClick={signOut}>Sign out</Button>
                             </Box>
                         </Box> 
                     : ''

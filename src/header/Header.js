@@ -62,10 +62,6 @@ export default function Header() {
     }, [userToken])
 
     React.useEffect(() => {
-        console.log(user);
-    }, [user])
-
-    React.useEffect(() => {
         setAvatar(avatarRef.current);
     }, [avatarRef])
 

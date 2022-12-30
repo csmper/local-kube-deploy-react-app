@@ -15,10 +15,10 @@ function Login(props) {
                 data-itp_support="true">
             </div>
             <div className="g_id_signin"
-                data-type="standard"
-                data-shape="rectangular"
+                data-type="icon"
+                data-shape="circle"
                 data-theme="outline"
-                data-text="signin_with"
+                data-text="signin"
                 data-size="large"
                 data-logo_alignment="left">
             </div>
