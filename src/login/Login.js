@@ -7,7 +7,7 @@ function Login(props) {
     return (
         <div>
             <div id="g_id_onload"
-                data-client_id="796381247590-18dctu7fubu8f91nsgd9kie2jkr9cq92"
+                data-client_id=""
                 data-context="signin"
                 data-ux_mode="popup"
                 data-callback="handleLoginResponse"
