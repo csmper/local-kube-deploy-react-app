@@ -76,7 +76,7 @@ export default function Header() {
                         Dashboard
                     </Typography>
                     <Box sx={{marginLeft: 'auto'}}>
-                        { !user ? <Login handleLoginResponse={handleLoginResponse}></Login> : <Avatar ref={avatarRef} onClick={toggleUserPopover} alt="profile photo" src={user.picture} /> }
+                        { !user ? <Login handleLoginResponse={handleLoginResponse}></Login> : <Avatar sx={{cursor: "pointer"}} ref={avatarRef} onClick={toggleUserPopover} alt="profile photo" src={user.picture}/> }
                     </Box>
                 </Toolbar>
             </AppBar>

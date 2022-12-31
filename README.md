@@ -68,3 +68,46 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Kubernetes
+### build image
+`docker build -t gsuhas/react-app .`
+
+### run app
+`docker run -d -p 3000:80 gsuhas/react-app`
+
+### stop container
+`docker stop $(docker ps -a -q)`
+
+### push to docker hub
+`docker push gsuhas/react-app:latest`
+
+### Start your local Kubernetes cluster with minikube:
+`minikube start`
+
+### create a new namespace called react-app:
+`kubectl create namespace react-app`
+
+### default context:
+`kubectl config set-context --current --namespace=react-app`
+
+### Deploy the application with the following:
+`kubectl apply -f deployment.yaml`
+
+### monitor the status of the deployment:
+`kubectl get deployment -w`
+
+### deploy the load balancer service:
+`kubectl apply -f service.yaml`
+
+### monitor the status of the service:
+`kubectl get services -w`
+
+### run app/service
+`minikube service react-app --url`
+
+### check ssh tunnel:
+`ps -ef | grep docker@127.0.0.1`
+
+### minikube UI
+`minikube dashboard`
